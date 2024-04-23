@@ -1,25 +1,11 @@
-import {View, StyleSheet, Button} from 'react-native';
-import FirstPage from './components/FirstPage'
+import {View, StyleSheet} from 'react-native';
+import FirstPage from './components/FirstPage';
+import Login from './components/Login';
+import Signup from './components/Signup';
+import ForgotPassword from './components/ForgotPassword';
 
 export default function App(){
   return (
-    <View style={styles.container}>
-    <FirstPage></FirstPage>
-    <Button color='black' style={styles.buttonStyle} title='Entrar'></Button>
-    </View>
+    <Login></Login>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'pink',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  buttonStyle:{
-    borderRadius:6,
-    fontWeight:'bold'
-  }
-
-});

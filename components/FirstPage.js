@@ -1,32 +1,30 @@
-import {View, Text, StyleSheet, Image} from 'react-native'
+import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native'
 
 export default function App(){
   return (
-    <View>
-      <Text style={styles.title}> text.Analyser</Text>
+    <View style={styles.container}>
       <View style={styles.imgContainer}>      
-       <Image style={styles.img} source={require('../assets/snack-icon.png')}/>
+       <Image style={styles.img} source={require('../assets/logo2.png')}/>
       </View>
+      <Text style={{color:"white", marginTop:30}}>Carregando...</Text>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-    title: {
-    marginTop: 16,
-    paddingVertical: 8,
-    borderRadius: 6,
-    color: 'black',
-    textAlign: 'center',
-    fontSize: 30,
-    fontWeight: 'bold'
+  container: {
+    flex: 1,
+    backgroundColor: '#DB7093',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
+  imgContainer: {
+    alignItems: 'center',
+    justifyContent: 'center'
+  }, 
   img:{
-    width:170,
+    width: 280,
     resizeMode: 'contain'
   },
-  imgContainer:{
-    alignItems:'center',
-    justifyContent: 'center',
-  }
+
 })
