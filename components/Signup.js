@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, TextInput, TouchableOpacity, KeyboardAvoidingView, Image, Text } from 'react-native';
 import { styles } from './styles/Styles';
 
-export default SignupScreen = () => {
+export default SignupScreen = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
@@ -44,9 +44,10 @@ export default SignupScreen = () => {
         <TouchableOpacity style={styles.btn}>
           <Text style={styles.btn_text}>Cadastrar</Text>
          </TouchableOpacity>  
-         <TouchableOpacity>
-            <Text style={styles.btn_text}>Voltar</Text>
-          </TouchableOpacity>    
+
+         <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+          <Text style={styles.btn_text}>Voltar</Text>
+        </TouchableOpacity>   
          </View>
 
     </KeyboardAvoidingView>

@@ -1,11 +1,12 @@
-import {View, StyleSheet} from 'react-native';
-import FirstPage from './components/FirstPage';
-import Login from './components/Login';
-import Signup from './components/Signup';
-import ForgotPassword from './components/ForgotPassword';
+import { NavigationContainer } from '@react-navigation/native';
+import AppNavigator from './components/AppNavigator'
 
-export default function App(){
+const App = () => {
   return (
-    <Login></Login>
+    <NavigationContainer>
+      <AppNavigator/>
+    </NavigationContainer>
   );
 }
+
+export default App

@@ -3,12 +3,11 @@ import { View, TextInput, TouchableOpacity, Text, KeyboardAvoidingView, Image } 
 import { styles } from './styles/Styles';
 
 
-export default ForgotPasswordScreen = () => {
+export default ForgotPasswordScreen = ({navigation}) => {
   const [email, setEmail] = useState('');
 
   return (
  
-
     <KeyboardAvoidingView style={styles.container}>
 
     <View style={styles.imgContainer}>      
@@ -27,7 +26,7 @@ export default ForgotPasswordScreen = () => {
         <Text style={styles.btn_text}>Enviar link</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('Login')}>
           <Text style={styles.btn_text}>Voltar</Text>
         </TouchableOpacity>
 

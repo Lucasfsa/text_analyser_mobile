@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, TextInput, Image, KeyboardAvoidingView, TouchableOpacity, Text } from 'react-native';
 import { styles } from './styles/Styles';
 
-export default function Login() {
+export default function Login({navigation}) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -27,16 +27,16 @@ export default function Login() {
            secureTextEntry
            style={styles.input}
          />
-         <TouchableOpacity style={styles.btn}>
+         <TouchableOpacity onPress={() => navigation.navigate('Dashboard')} style={styles.btn}>
           <Text style={styles.btn_text}>Entrar</Text>
          </TouchableOpacity>
 
          <View style={styles.buttonContainer}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Sign up')}>
             <Text style={styles.btn_text}>Cadastre-se</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Forgot Password')}>
             <Text style={styles.btn_text}>Esqueci a senha</Text>
           </TouchableOpacity>
         </View>

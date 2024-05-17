@@ -44,4 +44,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     width: '100%', 
   },
+  tab:{
+    backgroundColor: '#DB7093'
+  }
 });
